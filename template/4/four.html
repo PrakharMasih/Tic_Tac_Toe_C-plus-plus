@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/fours.css' %}">
+  <title>4th Watch page</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="">
+            <h1><span>T</span>ime <span>C</span>entre</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Wishlist</a></li>
+            <li><a href="">cart</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!--Mid sec-->
+
+  <section id="mid">
+
+  <div class="Photo">
+    {% load static %}
+    <img src="{% static 'img/8.jpeg' %}" alt="My image">
+  </div>
+
+  <div class="details">
+    <p>EARNSHAW BAUER<br>ES-8801-02</p>
+  </div>
+    <div class="another">
+    <p>MRP Rs 46,950<br>(Incl. all taxes)</p>
+  </div>
+  <div class="one">
+    <p>EMI STARTS AT Rs 720. NO COST EMI AVAILABLE</p>
+  </div> 
+  <div class="two">
+    <p>Time Centre Smart Mens Watch with black strap</p>
+  </div>
+  <div class="buy">
+    <a href="">BUY NOW</a>
+  </div>
+</section>
+</body>
+</html>

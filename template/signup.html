@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Page</title>
+   <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+   
+<form action="" class="form">
+  
+ <div class="form-inner">
+     <h2>Sign Up</h2>
+     <div class="content">
+          <input class="input" type="text" placeholder="First name" />
+          <input class="input" type="text" placeholder="Last name" />
+          <input class="input" type="tel" placeholder="Mobile no." />
+          <input class="input" type="text" placeholder="Email ID" />
+          <input class="input" type="password" placeholder="Password" />
+          <button class="btn">Submit</button>
+    </div>
+ </div>
+</form>
+
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Page</title>
+   <!-- <link href="style.css" rel="stylesheet"> -->
+   <!-- <link href="style.css" rel="stylesheet"> -->
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/stylesignup.css' %}">
+  </head>
+  <body>
+   
+    {% for message in messages %}
+      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+          <strong>Message:</strong> {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+    {% endfor %}
+
+    <form action="/signup/" class="form" method="post">
+      {% csrf_token %}
+      <div class="form-inner">
+          <h2>Sign Up</h2>
+          <div class="content">
+              <input class="input" type="text" id="username"  name="username" placeholder="Create username (only letters and numbers) " required />
+                <input class="input" type="text" id="fname"  name="fname" placeholder="Enter your First name" required/>
+                <input class="input" type="text" id="lname"  name="lname" placeholder="Enter your Last name" required/>
+                <input class="input" type="email" id="email"  name="email" placeholder="Enter your Email ID" required/>
+                <input class="input" type="password" id="pass1"  name="pass1" placeholder="Enter a strong Password" required/>
+                <input class="input" type="password" id="pass2"  name="pass2" placeholder="Re-type your Password" required/>
+                <button class="btn" type="submit">Submit</button>
+          </div>
+      </div>
+    </form>
+
+  </body>
+</html>

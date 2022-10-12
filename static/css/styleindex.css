@@ -1,0 +1,340 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+  font-size: 3rem;
+	color:crimson; 
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color:rgba(1, 4, 17, 0.822);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(17, 16, 16);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+
+#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+/* End Header section */
+
+/* Mid section*/
+
+  #Weeknd .false ul li{
+	display: flex;
+      padding: 1% 2%;
+      justify-content: space-between;
+      align-items: left;
+      margin-left: auto;
+	  flex: 1;
+	  list-style: none;
+	  display: inline-block;
+	  padding: 60px 10px;
+	  position: relative;
+	  left: 20cm;
+	  margin-top: 20px;
+}
+#Weeknd .false ul li a{
+	color: rgb(0, 0, 3);
+	text-decoration: none;
+	font-weight: bold;
+    font-size: large;
+}
+  #Weeknd .alarm{
+	position: relative;
+	left: 2ch;
+	float: left;
+	margin-top: 1cm;
+	margin-left: 10px;
+	margin-right: 45px;
+	height: 20%;
+	width: 20%;
+	
+  }
+  #Weeknd .Starboy{
+	padding: 1ch 13ch;
+  }
+	
+  #Weeknd .alarm a{
+	 display: flex;
+	 color:black;
+	 font-size: 1.9rem;
+	 margin-top: 0.6cm;
+	 margin-left: 1.3cm; 
+	
+  }
+  #Weeknd .alarm h2{
+	display: flex;
+    margin-left: 1.3cm; 
+  }
+
+  /**2nd phase of mighty Section **/
+
+#Drake .Gods{
+	font-weight: 800;
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.616);
+}
+  
+  .Gods hr{
+	display: inline-block;
+	position: relative;
+	top: 42px;
+	color: rgba(100, 93, 93, 0.089);
+	width: 35.6cm;
+	
+  }
+  .Gods p{
+	font-size: 2.6rem;
+	text-align: center;
+	position: relative;
+	bottom: 3cm;
+	right: 5.9cm;
+	top: 0.2cm;
+  }
+  .plan{
+	display: block;
+	text-align: justify;
+	font-size: 1.8rem;
+	padding-left: 3.7cm;
+	padding-top: 57px;
+	
+	
+  }
+  .plan h2{
+	color: rgba(0, 0, 0, 0.616);
+	font-size: 2.6rem;
+  }
+ 
+  .plan h3{
+    display: block;
+	color: rgba(0, 0, 0, 0.616);
+	margin-top: 29px;
+  }
+  .plan p{
+    display: block;
+	color: rgb(0, 0, 0);
+	margin-top: 20px;
+	text-align: justify;
+	margin-right: 93px;
+  }
+  .plan h4{
+    display: block;
+	color: rgba(0, 0, 0, 0.616);
+	margin-top: 29px;
+	margin-bottom: 20px;
+  }
+ 
+   /**Finally the last section **/
+
+   #Container{
+	display: block;
+	background-color: rgba(0, 0, 0, 0.849);
+	padding: 25px;
+	margin-top: 80px;
+   }
+
+   .Eminem ul li{
+	font-size: 1.3rem;
+	display: inline-block;
+	text-decoration: none;
+    list-style: none;
+	position: relative;
+	top: 2cm;
+	margin-left: 2.2cm;
+	margin-top: 12px;
+	margin-bottom: 70px;
+	padding: 2px 32px;
+	
+   }
+   .Eminem ul li a {
+	color: rgb(255, 251, 251);
+   }
+
+   .Snoop{
+	font-size: 1.8rem;
+   }
+   .Snoop ul li{
+	display: inline;
+	text-decoration: none;
+    list-style: none;
+	position: relative;
+	top: 1cm;
+	margin-left: 2cm;
+	padding: 2px 22px;
+   }
+   .Snoop ul li a {
+	color: rgb(255, 255, 255);
+   }
+   #Container .Eminem ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#Container .Eminem ul li:hover a {
+	color: crimson;
+}
